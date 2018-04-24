@@ -34,10 +34,10 @@ This function implements the basic deterministic EOQ (Economic Order Quantity) m
 
 ### Parameters
 
-+ **l** Demand (per unit of time).
-+ **k** Preparation cost (per order).
-+ **I** Storage cost (per article).
-+ **C** Cost of goods (per item).
++ **l**: Demand (per unit of time).
++ **k**: Preparation cost (per order).
++ **I**: Storage cost (per article).
++ **C**: Cost of goods (per item).
 
 ### Return
 
@@ -129,11 +129,11 @@ This function provides an EOQ with discounts where the discount occurs for units
 
 ### Parameters
 
-+ **l** Demand (per unit of time).
-+ **k** Preparation cost (per order).
-+ **I** Storage cost (per article).
-+ **c** Vector of cost of goods.
-+ **q** Quantites where the discounts are applied.
++ **l**: Demand (per unit of time).
++ **k**: Preparation cost (per order).
++ **I**: Storage cost (per article).
++ **c**: Vector of cost of goods.
++ **q**: Quantites where the discounts are applied.
 
 ### Return
 
