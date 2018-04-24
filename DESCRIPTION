@@ -1,0 +1,15 @@
+Package: EOQd
+Title: EOQ Model With and Without Discounts
+Version: 1.0
+Authors@R: person("José Carlos", "Soage", email = "jsoage@uvigo.es", role = c("aut", "cre"))
+Maintainer: José Carlos Soage González <jsoage@uvigo.es>
+Description: This package implements functions suitable to solve problems of deterministic inventory with and without quantity discounts.
+Depends: R (>= 3.4.0)
+License: GPL-2 
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.0.1
+Imports: ggplot2
+Suggests: knitr,
+    rmarkdown
+VignetteBuilder: knitr
