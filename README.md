@@ -108,7 +108,6 @@ res2
 
 A company needs 5000 chairs every month to sell in their online store. The supplier negotiates with the company that if they buy more than 500 chairs they offer them a 15% disccount and if they buy more than 1000 they offer them a 50% disccount. Every chair costs 10€, make an order costs 40€ and the storage cost is esimated to be 3€ per chair.
 
-We have that:
 ```{r, eval=T, fig.align='center',message = FALSE, fig.height = 4, fig.width = 6, warning = FALSE, comment=""}
 dis <- c(0, 0.15, 0.5)
 q <- c(0, 500, 1000)
@@ -119,8 +118,6 @@ I <- 3
 opt <- EOQd(dis = dis, l = l, k = k, I = I, q = q)
 opt
 ```
-
-On each order the company should buy 1000 chairs with an estimated total cost of 16325€ per order. Cycle length of 6 days (0.2 months) and 5 orders every month.
 
 
 ## EOQpd(c, q, l , k, I)
