@@ -2,8 +2,7 @@
 
 ## Description [package]
 
-This package implements functions suitable to solve problems of deterministic inventory with and without quantity discounts. It includes the next functions:
-
+This package implements functions suitable to solve problems of deterministic inventory with and without quantity discounts. 
 
 ### Usage
 
@@ -15,7 +14,7 @@ devtools::install_github("sidoruvigo/EOQd")
 ```
 Load the library with:  `library("EOQd")`
 
-
+The package includes the next functions:
 + EOQ()
 + EOQd()
 + EOQpd()
