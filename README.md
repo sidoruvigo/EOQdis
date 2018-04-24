@@ -75,11 +75,11 @@ This function provides an EOQ with discounts where the units purchased have the 
 
 ### Parameters
 
-+ **dis ** Vector of discounts.
-+ **l ** Demand (per unit of time).
-+ **k ** Preparation cost (per order).
-+ **I ** Storage cost (per article).
-+ **q ** Vector of quantites within the discounts given in 'dis' are applied.
++ **dis**: Vector of discounts.
++ **l**: Demand (per unit of time).
++ **k**: Preparation cost (per order).
++ **I**: Storage cost (per article).
++ **q**: Vector of quantites within the discounts given in 'dis' are applied.
 
 ### Return
 
