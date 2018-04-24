@@ -9,7 +9,7 @@ This package implements functions suitable to solve problems of deterministic in
 
 In order to use this package, install it with:
 ```{r, eval=T, fig.align='center',message = FALSE, fig.height = 4, fig.width = 6, warning = FALSE, comment=""}
-# install.packages("devtools") # If needed
+install.packages("devtools") # If needed
 
 devtools::install_github("sidoruvigo/EOQd")
 ```
