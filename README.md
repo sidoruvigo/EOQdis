@@ -162,7 +162,7 @@ res3 <- EOQpd(l = 50000, k = 10, I = 0.25, c = c, q = q)
 res3
 ```
 
-### Real exameple
+### Real example
 
 A company is selling.....
 
