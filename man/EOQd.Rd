@@ -41,8 +41,8 @@ dis <- c(0, 0.05, 0.1)
 l <- 520
 k <- 10
 I <- 0.2
-c <- 5
 q <- c(0, 110, 150)
+c <- 5
 dat <- EOQd(dis = dis, l = l, k = k, I = I, q = q, c = c)
 dat
 }
