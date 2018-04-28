@@ -66,7 +66,7 @@ res1
 ```
 
 
-## EOQd(dis, l, k , I, q)
+## EOQd(l, k, I, q, dis, c)
 
 ### Description [function EOQd] 
 
@@ -75,11 +75,12 @@ This function provides an EOQ with discounts where the units purchased have the 
 
 ### Parameters
 
-+ **dis**: Vector of discounts.
 + **l**: Demand (per unit of time).
 + **k**: Preparation cost (per order).
 + **I**: Storage cost (per article).
-+ **q**: Vector of quantites within the discounts given in 'dis' are applied.
++ **q**: Product quantities where the price changes (Vector of quantities within the discounts given in 'dis' are applied).
++ **dis**: Vector of discounts.
++ **c**: Orginal price of the product. (Price of the product without any discount)
 
 ### Return
 
@@ -120,11 +121,11 @@ opt
 ```
 
 
-## EOQpd(c, q, l , k, I)
+## EOQpd(l, k, I, q, c)
 
 ### Description [function EOQpd] 
 
-This function provides an EOQ with discounts where the discount occurs for units purchased when a certain amount is reached.
+This function provides an EOQ with discounts where the discount occurs for units purchased when a certain amount is reached.When the amount of order increases, the cost price decreases in the additional units ordered, not in all units.
 
 
 ### Parameters
@@ -132,8 +133,8 @@ This function provides an EOQ with discounts where the discount occurs for units
 + **l**: Demand (per unit of time).
 + **k**: Preparation cost (per order).
 + **I**: Storage cost (per article).
-+ **c**: Vector of cost of goods.
 + **q**: Quantites where the discounts are applied.
++ **c**: Vector of cost of goods.
 
 ### Return
 
