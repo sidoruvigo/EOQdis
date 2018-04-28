@@ -1,6 +1,6 @@
-#' Package ‘EOQd’
+#' Package ‘EOQdis’
 #'
-#' Documentation for package ‘EOQd’ version 1.0
+#' Documentation for package ‘EOQdis’ version 1.0
 #'
 #' @description
 #'
@@ -8,7 +8,7 @@
 #'
 #' @details The Description file:
 #' \itemize{
-#' \item{Package: EOQd}
+#' \item{Package: EOQdis}
 #' \item{Version: 1.0}
 #' \item{Maintainer: José Carlos Soage González \email{jsoage@@uvigo.es}}
 #' \item{License: GPL-2}

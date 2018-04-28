@@ -3,10 +3,11 @@
 #' @description This function provides an EOQ with discounts where the units purchased have the same reduction in price.
 #'
 #' @param dis Vector of discounts.
-#' @param l Demand (per unit of time).
+#' @param l Demand of the product (per unit of time).
 #' @param k Preparation cost (per order).
 #' @param I Storage cost (per article).
-#' @param q Vector of quantites within the discounts given in 'dis' are applied.
+#' @param q Product quantities where the price changes (Vector of quantities within the discounts given in 'dis' are applied).
+#' @param c Orginal price of the product. (Price of the product without any discount)
 #'
 #' @details This function implements the deterministic EOQ (Economic Order Quantity) model with discounts where the units purchased have the same reduction in price.
 #
@@ -28,26 +29,27 @@
 #' l <- 520
 #' k <- 10
 #' I <- 0.2
-#' C <- 5
+#' c <- 5
 #' q <- c(0, 110, 150)
-#' dat <- EOQd(dis = dis, l = l, k = k, I = I, q = q)
+#' dat <- EOQd(dis = dis, l = l, k = k, I = I, q = q, c = c)
 #' dat
 #' }
 #'
 #' @export
-EOQd <- function(dis, l, k , I, q) {
+EOQd <- function(l, k, I, q, dis, c) {
   if (any(dis < 0)) stop("All 'dis' must be >= 0")
   if (l < 0) stop("'l' must be >= 0")
   if (k < 0) stop("'k' must be >= 0")
   if (I < 0) stop("'I' must be >= 0")
   if (any(dis>=1)) stop("Every 'dis' must be <=1")
+  if (c <= 0) stop("'c' must be > 0")
 
   cat("Call:", "\n")
   print(match.call())
   C <- vector("list", length = length(dis))
 
   for (i in 1:length(dis)) {
-    C[i] <- 5 * (1 - dis[i])
+    C[i] <- c * (1 - dis[i])
   }
 
   # Step 1

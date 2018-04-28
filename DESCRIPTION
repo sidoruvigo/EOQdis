@@ -1,4 +1,4 @@
-Package: EOQd
+Package: EOQdis
 Title: EOQ Model With and Without Discounts
 Version: 1.0
 Authors@R: person("José Carlos", "Soage", email = "jsoage@uvigo.es", role = c("aut", "cre"))

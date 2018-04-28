@@ -1,12 +1,13 @@
 #' @title EOQ model with progressive discount for amounts.
 #'
-#' @description This function provides an EOQ with discounts where the discount occurs for units purchased when a certain amount is reached.
+#' @description This function provides an EOQ with discounts where the discount occurs for units purchased when a certain amount is reached. When the amount of
+#' order increases, the cost price decreases in the additional units ordered, not in all units.
 #'
-#' @param l Demand (per unit of time).
+#' @param l Demand of the product (per unit of time).
 #' @param k Preparation cost (per order).
 #' @param I Storage cost (per article).
-#' @param c Vector of cost of goods.
-#' @param q Vector of quantites within the discounts are applied.
+#' @param c Vector of costs of the good.
+#' @param q Product quantities where the price changes. Vector of quantites within the discounts are applied.
 #'
 #' @details This function implements the deterministic EOQ (Economic Order Quantity) model with discounts where the discount occurs for units purchased when a certain amount is reached.
 #
@@ -18,8 +19,6 @@
 #' \item{N: }{Number of orders.}
 #' }
 #'
-#' @references
-#' References
 #'
 #' @author José Carlos Soage González \email{jsoage@@uvigo.es}
 #'
@@ -36,7 +35,7 @@
 #' }
 #'
 #' @export
-EOQpd <- function(c, q, l , k, I) {
+EOQpd <- function(l, k, I, q, c) {
   if (any(c < 0)) stop("'c' must be >= 0")
   if (any(q < 0)) stop("'q' must be >= 0")
   if (l < 0) stop("'l' must be >= 0")

@@ -1,4 +1,4 @@
-#' S3 method to plot a EOQ object by using the generic plot function.
+#' S3 method to plot a EOQ object by using the generic plot function. Plots the scheme of the EOQ model.
 #'
 #' @title plot.EOQ
 #'

@@ -4,18 +4,20 @@
 \alias{EOQd}
 \title{EOQ model with discounts (All units with the same discount)}
 \usage{
-EOQd(dis, l, k, I, q)
+EOQd(l, k, I, q, dis, c)
 }
 \arguments{
-\item{dis}{Vector of discounts.}
-
-\item{l}{Demand (per unit of time).}
+\item{l}{Demand of the product (per unit of time).}
 
 \item{k}{Preparation cost (per order).}
 
 \item{I}{Storage cost (per article).}
 
-\item{q}{Vector of quantites within the discounts given in 'dis' are applied.}
+\item{q}{Product quantities where the price changes (Vector of quantities within the discounts given in 'dis' are applied).}
+
+\item{dis}{Vector of discounts.}
+
+\item{c}{Orginal price of the product. (Price of the product without any discount)}
 }
 \value{
 A list containing:
@@ -39,9 +41,9 @@ dis <- c(0, 0.05, 0.1)
 l <- 520
 k <- 10
 I <- 0.2
-C <- 5
+c <- 5
 q <- c(0, 110, 150)
-dat <- EOQd(dis = dis, l = l, k = k, I = I, q = q)
+dat <- EOQd(dis = dis, l = l, k = k, I = I, q = q, c = c)
 dat
 }
 

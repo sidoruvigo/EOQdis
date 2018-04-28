@@ -4,18 +4,18 @@
 \alias{EOQpd}
 \title{EOQ model with progressive discount for amounts.}
 \usage{
-EOQpd(c, q, l, k, I)
+EOQpd(l, k, I, q, c)
 }
 \arguments{
-\item{c}{Vector of cost of goods.}
-
-\item{q}{Vector of quantites within the discounts are applied.}
-
-\item{l}{Demand (per unit of time).}
+\item{l}{Demand of the product (per unit of time).}
 
 \item{k}{Preparation cost (per order).}
 
 \item{I}{Storage cost (per article).}
+
+\item{q}{Product quantities where the price changes. Vector of quantites within the discounts are applied.}
+
+\item{c}{Vector of cost of goods.}
 }
 \value{
 A list containing:
@@ -27,7 +27,8 @@ A list containing:
 }
 }
 \description{
-This function provides an EOQ with discounts where the discount occurs for units purchased when a certain amount is reached.
+This function provides an EOQ with discounts where the discount occurs for units purchased when a certain amount is reached. When the amount of
+order increases, the cost price decreases in the additional units ordered, not in all units.
 }
 \details{
 This function implements the deterministic EOQ (Economic Order Quantity) model with discounts where the discount occurs for units purchased when a certain amount is reached.
