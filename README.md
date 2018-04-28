@@ -160,7 +160,21 @@ res3
 
 ### Real example
 
-A company is selling.....
+An university needs to buy 5000 markers every year, with a cost per order of 15€ and there is an estimated storage cost of 0.2€. The provider has the following policy: if the customer buys less than 500 markers, the cost per item is 0.75€, if the customer buys more than 500 units, the cost per item is 0.5€. We need to determine the optimal policy
+
+```{r, eval=T, fig.align='center',message = FALSE, fig.height = 4, fig.width = 6, warning = FALSE, comment=""}
+
+l <- 5000
+k <- 15
+I <- 0.2
+c <- c(0.75, 0.5)
+q <- c(0, 500)
+
+res3 <- EOQpd(l = l, k = k, I = I, c = c, q = q)
+res3
+```
+
+The optimal policy is buy 1000 markers five times. Buying 1000 markers (approximately) two months and a half (5 orders in 12 months).
 
 
 
