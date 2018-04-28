@@ -14,7 +14,7 @@ devtools::install_github("sidoruvigo/EOQdis")
 ```
 Load the library with:  `library("EOQdis")`
 
-The package includes the next functions:
+The package includes the following functions:
 + EOQ()
 + EOQd()
 + EOQpd()
