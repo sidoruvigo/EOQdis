@@ -108,14 +108,14 @@ res2
 
 ### Real example
 
-A company needs 500 chairs every month to sell in their online store that costs 15€ each. The supplier negotiates with the company that if they buy more than 500 chairs they offer them a 25% disccount and if they buy more than 1000 they offer them a 50% disccount. Every chair costs 10€, make an order costs 40€ and the storage cost is esimated to be 3€ per chair.
+A company needs 500 chairs every month to sell in their online store that costs 15€ each. The supplier negotiates with the company that if they buy more than 50 chairs they offer them a 25% disccount and if they buy more than 100 they offer them a 50% disccount. Making an order costs 10€ and the storage cost is estimated to be 2€ per chair.
 
 ```{r, eval=T, fig.align='center',message = FALSE, fig.height = 4, fig.width = 6, warning = FALSE, comment=""}
 dis <- c(0, 0.25, 0.5)
 q <- c(0, 50, 100)
 l <- 500
-k <- 15
-I <- 3
+k <- 10
+I <- 2
 c <- 15
 
 opt <- EOQd(dis = dis, l = l, k = k, I = I, q = q, c = c)
