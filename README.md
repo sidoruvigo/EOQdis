@@ -174,8 +174,6 @@ res3 <- EOQpd(l = l, k = k, I = I, c = c, q = q)
 res3
 ```
 
-The optimal policy is buy 1000 markers five times. Buying 1000 markers (approximately) two months and a half (5 orders in 12 months).
-
 
 
 ## plot.EOQ(z)
