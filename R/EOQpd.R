@@ -73,6 +73,8 @@ EOQpd <- function(l, k, I, q, c) {
   T <- Qopt/l
   N <- 1/T
   df[1, ] <- c(Qopt, Zopt, T, N)
-  return(list(Q = df$Q, Z = df$Z, T = df$T, N = df$N))
+  x <- list(Q = df$Q, Z = df$Z, T = df$T, N = df$N)
+  class(x) <- c("list", "EOQ")
+  x
 }
 

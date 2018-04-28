@@ -62,7 +62,9 @@ EOQd <- function(l, k, I, q, dis, c) {
     T <- Qm / l
     N <- 1/T
     df[1, ] <- c(Qm, Zmin, T, N)
-    return(list(Q = df$Q, Z = df$Z, T = df$T, N = df$N))
+    x <- list(Q = df$Q, Z = df$Z, T = df$T, N = df$N)
+    class(x) <- c("list", "EOQ")
+    x
 
   } else { # Qm is not feasible
     Qmin <- q[j]
@@ -73,7 +75,7 @@ EOQd <- function(l, k, I, q, dis, c) {
     Qj <- sqrt((2 * k * l) / (I * as.numeric(C[j]))) #; print(Qj)
 
     # Step 4
-    if  (Qj >= q[j] & Qj < q[j + 1]) {
+    if  (Qj >= q[j] & Qj < q[j + 1]) { # Qj is feasible
       Zj <- as.numeric(C[j]) * l + k * l / Qj + I * as.numeric(C[j])* Qj / 2 #; print(Zj)
 
       if (Zmin > Zj) {
@@ -81,13 +83,17 @@ EOQd <- function(l, k, I, q, dis, c) {
         T <- Qj / l
         N <- 1/T
         df[1, ] <- c(Qj, Zmin, T, N)
-        return(list(Q = df$Q, Z = df$Z, T = df$T, N = df$N))
+        x <- list(Q = df$Q, Z = df$Z, T = df$T, N = df$N)
+        class(x) <- c("list", "EOQ")
+        x
       } else {
         df <- data.frame(Q = NA, Z = NA, T = NA, N = NA)
         T <- Qmin / l
         N <- 1/T
         df[1, ] <- c(Qmin, Zmin, T, N)
-        return(list(Q = df$Q, Z = df$Z, T = df$T, N = df$N))
+        x <- list(Q = df$Q, Z = df$Z, T = df$T, N = df$N)
+        class(x) <- c("list", "EOQ")
+        x
       }
     } else { # Qj is not feasible
       Zj <- as.numeric(C[j]) * l + k * l / Qj + I * as.numeric(C[j])* Qj / 2 #; print(Zj)
@@ -100,13 +106,12 @@ EOQd <- function(l, k, I, q, dis, c) {
   }
 
   # Step 5
-  if (j >= 2) {
 
     while (j >= 2) {
 
       # Step 3
       j <- j - 1
-      Qj <- sqrt((2 * k * l) / (I * as.numeric(C[j]))) #; print(Qj) #; print(paste("Qj", Qj))
+      Qj <- sqrt((2 * k * l) / (I * as.numeric(C[j]))) #; print(Qj)
 
       # Step 4
       if  (Qj >= q[j] & Qj < q[j + 1]) {
@@ -117,13 +122,17 @@ EOQd <- function(l, k, I, q, dis, c) {
           T <- Qj / l
           N <- 1/T
           df[1, ] <- c(Qj, Zmin, T, N)
-          return(list(Q = df$Q, Z = df$Z, T = df$T, N = df$N))
+          x <- list(Q = df$Q, Z = df$Z, T = df$T, N = df$N)
+          class(x) <- c("list", "EOQ")
+          x
         } else {
           df <- data.frame(Q = NA, Z = NA, T = NA, N = NA)
           T <- Qmin / l
           N <- 1/T
           df[1, ] <- c(Qmin, Zmin, T, N)
-          return(list(Q = df$Q, Z = df$Z, T = df$T, N = df$N))
+          x <- list(Q = df$Q, Z = df$Z, T = df$T, N = df$N)
+          class(x) <- c("list", "EOQ")
+          x
         }
       } else {
         Zj <- as.numeric(C[j]) * l + k * l / Qj + I * as.numeric(C[j])* Qj / 2 #; print(Zj)
@@ -131,23 +140,18 @@ EOQd <- function(l, k, I, q, dis, c) {
         if (Zj < Zmin) {
           Zmin <- Zj
           Qmin <- Qj
-
-          df <- data.frame(Q = NA, Z = NA, T = NA, N = NA)
-          T <- Qmin/l
-          N <- 1/T
-          df[1, ] <- c(Qmin, Zmin, T, N)
-          return(list(Q = df$Q, Z = df$Z, T = df$T, N = df$N))
         }
       }
     }
-  }
 
   if (j == 1) {
     df <- data.frame(Q = NA, Z = NA, T = NA, N = NA)
     T <- Qmin/l
     N <- 1/T
     df[1, ] <- c(Qmin, Zmin, T, N)
-    return(list(Q = df$Q, Z = df$Z, T = df$T, N = df$N))
+    x <- list(Q = df$Q, Z = df$Z, T = df$T, N = df$N)
+    class(x) <- c("list", "EOQ")
+    x
   }
 }
 

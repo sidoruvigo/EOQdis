@@ -15,7 +15,7 @@ EOQpd(l, k, I, q, c)
 
 \item{q}{Product quantities where the price changes. Vector of quantites within the discounts are applied.}
 
-\item{c}{Vector of cost of goods.}
+\item{c}{Vector of costs of the good.}
 }
 \value{
 A list containing:
@@ -45,9 +45,6 @@ dat <- EOQpd(l = 50000, k = 10, I = 0.25, c = c, q = q)
 dat
 }
 
-}
-\references{
-References
 }
 \author{
 José Carlos Soage González \email{jsoage@uvigo.es}

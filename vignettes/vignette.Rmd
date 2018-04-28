@@ -76,7 +76,7 @@ res1
 ```
 
 
-## EOQd(dis, l, k , I, q, c)
+## EOQd(l, k, I, q, dis, c)
 
 ### Description [function EOQd] 
 
@@ -85,11 +85,11 @@ This function provides an EOQ with discounts where the units purchased have the 
 
 ### Parameters
 
-+ **dis**: Vector of discounts.
 + **l**: Demand (per unit of time).
 + **k**: Preparation cost (per order).
 + **I**: Storage cost (per article).
 + **q**: Product quantities where the price changes (Vector of quantities within the discounts given in 'dis' are applied).
++ **dis**: Vector of discounts.
 + **c**: Orginal price of the product. (Price of the product without any discount)
 
 ### Return
@@ -112,7 +112,7 @@ k <- 10  # Preparation cost (per order).
 I <- 0.2 # Storage cost (per article).
 q <- c(0, 110, 150) # 5% when the quantity is greater than 110 and less than 150. For more than 150 units the discoun is 10%
 c <- 5 # Original price of the product
-res2 <- EOQd(dis = dis, l = l, k = k, I = I, q = q)
+res2 <- EOQd(dis = dis, l = l, k = k, I = I, q = q, c = 5)
 res2
 ```
 
@@ -133,14 +133,14 @@ opt <- EOQd(dis = dis, l = l, k = k, I = I, q = q, c = c)
 opt
 ```
 
-On each order the company should buy 1000 chairs with an estimated total cost of 16325€ per order. Cycle length of 6 days (0.2 months) and 5 orders every month.
+On each order the company should buy 1000 chairs. Cycle length of 6 days (0.2 months) and 5 orders every month.
 
 
-## EOQpd(c, q, l , k, I)
+## EOQpd(l, k, I, q, c)
 
 ### Description [function EOQpd] 
 
-This function provides an EOQ with discounts where the discount occurs for units purchased when a certain amount is reached.
+This function provides an EOQ with discounts where the discount occurs for units purchased when a certain amount is reached. When the amount of order increases, the cost price decreases in the additional units ordered, not in all units.
 
 
 ### Parameters
@@ -148,8 +148,9 @@ This function provides an EOQ with discounts where the discount occurs for units
 + **l**: Demand (per unit of time).
 + **k**: Preparation cost (per order).
 + **I**: Storage cost (per article).
-+ **c**: Vector of cost of goods.
 + **q**: Quantites where the discounts are applied.
++ **c**: Vector of cost of goods.
+
 
 ### Return
 

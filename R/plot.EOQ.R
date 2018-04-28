@@ -7,17 +7,16 @@
 #'
 #' @examples
 #' \dontrun{
-#' l = 520
-#' k = 10
-#' I = 0.2
-#' C = 5
+#' l <- 520
+#' k <- 10
+#' I <- 0.2
+#' C <- 5
 #'
 #' res <- EOQ(l = l, k = k, I = I, C = C)
 #' res
 #' plot(res)
 #'
-#' res2 <- EOQd(dis = c(0, 0.05, 0.1), l = 520, k = 10, I = 0.2, q = c(0, 110, 150))
-#' class(res2) <- "EOQ"
+#' res2 <- EOQd(dis = c(0, 0.05, 0.1), l = 520, k = 10, I = 0.2, q = c(0, 110, 150), c = 5)
 #' plot(res2)
 #'
 #' }
