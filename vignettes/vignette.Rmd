@@ -202,7 +202,7 @@ S3 method to plot a EOQ object by using the generic plot function.
 
 ### Parameters
 
-+ **x** Object of class EOQ.
++ **x**: Object of class EOQ.
 
 
 ### Return
@@ -215,15 +215,8 @@ A plot with classical EOQ representation.
 ```{r, eval=T, fig.align='center',message = FALSE, fig.height = 4, fig.width = 6, warning = FALSE, comment=""}
 
 plot(res1)
-
-```
-
-We can also convert the results of the EOQd and EOQpd funcions to class EOQ in order to plot the EOQ graph:
-
-```{r, eval=T, fig.align='center',message = FALSE, fig.height = 4, fig.width = 6, warning = FALSE, comment=""}
-
-class(res2) <- "EOQ"
 plot(res2)
+plot(res3)
 
 ```
 
