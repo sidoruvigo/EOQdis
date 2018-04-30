@@ -188,7 +188,7 @@ S3 method to plot a EOQ object by using the generic plot function.
 
 ### Parameters
 
-+ **x** Object of class EOQ.
++ **x**: Object of class EOQ.
 
 
 ### Return
