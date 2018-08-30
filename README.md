@@ -6,9 +6,9 @@ This package implements functions suitable to solve problems of deterministic in
 
 ### Usage
 
-In order to use this package, install it with:
+## Install the development version from GitHub
 
-```{r}
+```r
 install.packages("devtools") # If needed
 devtools::install_github("sidoruvigo/EOQdis")
 ```
