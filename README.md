@@ -52,7 +52,7 @@ A list containing:
 
 ### Usage
 
-```{r, eval=T, fig.align='center',message = FALSE, fig.height = 4, fig.width = 6, warning = FALSE, comment=""}
+```r
 
 library(EOQdis)
 
@@ -95,7 +95,7 @@ A list containing:
 
 ### Usage
 
-```{r, eval=T, fig.align='center',message = FALSE, fig.height = 4, fig.width = 6, warning = FALSE, comment=""}
+```r
 
 dis <- c(0, 0.05, 0.1) # Disccounts: 5% and 10%
 l <- 520 # Demand (per unit of time).
@@ -111,7 +111,7 @@ res2
 
 A company needs 500 chairs every month to sell in their online store that costs 15€ each. The supplier negotiates with the company that if they buy more than 50 chairs they offer them a 25% disccount and if they buy more than 100 they offer them a 50% disccount. Making an order costs 10€ and the storage cost is estimated to be 2€ per chair.
 
-```{r, eval=T, fig.align='center',message = FALSE, fig.height = 4, fig.width = 6, warning = FALSE, comment=""}
+```r
 dis <- c(0, 0.25, 0.5)
 q <- c(0, 50, 100)
 l <- 500
@@ -150,7 +150,7 @@ A list containing:
 
 ### Usage
 
-```{r, eval=T, fig.align='center',message = FALSE, fig.height = 4, fig.width = 6, warning = FALSE, comment=""}
+```r
 
 l <- 50000
 k <- 10
@@ -166,7 +166,7 @@ res3
 
 An university needs to buy 5000 markers every year, with a cost per order of 15€ and there is an estimated storage cost of 0.2€. The provider has the following policy: if the customer buys less than 500 markers, the cost per item is 0.75€, if the customer buys more than 500 units, the cost per item is 0.5€. We need to determine the optimal policy
 
-```{r, eval=T, fig.align='center',message = FALSE, fig.height = 4, fig.width = 6, warning = FALSE, comment=""}
+```r
 
 l <- 5000
 k <- 15
@@ -199,7 +199,7 @@ A plot with classical EOQ representation.
 
 ### Usage
 
-```{r, eval=T, fig.align='center',message = FALSE, fig.height = 4, fig.width = 6, warning = FALSE, comment=""}
+```r
 
 plot(res1)
 plot(res2)
