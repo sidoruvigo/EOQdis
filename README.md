@@ -7,11 +7,12 @@ This package implements functions suitable to solve problems of deterministic in
 ### Usage
 
 In order to use this package, install it with:
-```{r, eval=T, fig.align='center',message = FALSE, fig.height = 4, fig.width = 6, warning = FALSE, comment=""}
-install.packages("devtools") # If needed
 
+```{r}
+install.packages("devtools") # If needed
 devtools::install_github("sidoruvigo/EOQdis")
 ```
+
 Load the library with:  `library("EOQdis")`
 
 The package includes the following functions:
